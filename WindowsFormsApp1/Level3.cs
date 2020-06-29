@@ -7,21 +7,19 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Level1 : Form
+    public partial class Level3 : Form
     {
         private Game _game;
-        private Form _nextForm;
 
-        public Level1()
+        public Level3()
         {
             InitializeComponent();
         }
 
-        private void Level1_Load(object sender, EventArgs e)
+        private void Level3_Load(object sender, EventArgs e)
         {
-            this._nextForm = new Level2();
-            this._game = new Game(panel1, pointer, win, this, this._nextForm);
-            this.FormClosed+=FormClose;
+            this._game = new Game(panel1, pointer, win, this, null);
+            this.FormClosed += FormClose;
         }
 
         private void FormClose(object sender, FormClosedEventArgs e)
@@ -30,12 +28,10 @@ namespace WindowsFormsApp1
         }
 
 
-        private void Level1_KeyDown(object sender, KeyEventArgs e)
+        private void Level3_KeyDown(object sender, KeyEventArgs e)
         {
             var eKeyCode = e.KeyCode;
             _game.TryMovePoint(eKeyCode);
         }
-
-        
     }
 }

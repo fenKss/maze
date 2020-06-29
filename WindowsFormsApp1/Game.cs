@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
@@ -12,24 +13,54 @@ namespace WindowsFormsApp1
         private List<PictureBox> _borders;
         private PictureBox pointer;
         private PictureBox win;
-        private int _formWidth;
-        private int _formHeight;
+        private Form _thisForm;
+        private Form _nextForm;
+        private Label _timerLabel;
+        private int sec = 0;
+        private Panel _panel;
 
         public delegate void WinHandler();
 
         public event WinHandler OnWin;
 
-        public Game(Panel panel, PictureBox pointer, PictureBox win, int width, int height)
+        public Game(Panel panel, PictureBox pointer, PictureBox win, Form thisForm, Form nextForm)
         {
             this.pointer = pointer;
-            this._formHeight = height;
-            this._formWidth = width;
+            this._thisForm = thisForm;
+            this._nextForm = nextForm;
+            this._panel = panel;
             this.win = win;
             string pattern = "border.+";
             this._borders = panel.Controls.Cast<PictureBox>()
                 .Where(x => Regex.IsMatch(x.Name, pattern, RegexOptions.IgnoreCase)).ToList();
             ;
+            this.OnWin += Win;
+
+            InitTimer();
         }
+
+        private void InitTimer()
+        {
+            int labelWidth = 40,
+                labelHeight = 100;
+            Timer timer = new Timer();
+            _timerLabel = new Label();
+            _timerLabel.Size = new Size(labelWidth,labelHeight);
+            _timerLabel.Location = new Point(_thisForm.Width-labelWidth,0);
+            // _timerLabel.Location = new Point(10,10);
+            timer.Interval=1000;
+            timer.Start();
+            timer.Tick += this.TimerTick;
+            this._panel.Controls.Add(_timerLabel);
+        }
+
+        private void TimerTick(object sender, EventArgs e)
+        {
+            this.sec++;
+            _timerLabel.Text = sec.ToString();
+        }
+
+       
 
         public Point CalculatePoint(Keys keyCode)
         {
@@ -65,7 +96,7 @@ namespace WindowsFormsApp1
         {
             int x = point.X,
                 y = point.Y;
-            return x >= 0 && x + pointer.Width <= _formWidth && y >= 0 && y + pointer.Height <= _formHeight;
+            return x >= 0 && x + pointer.Width <= _thisForm.Width && y >= 0 && y + pointer.Height <= _thisForm.Height;
         }
 
         public void TryMovePoint(Keys eKeyCode)
@@ -123,6 +154,40 @@ namespace WindowsFormsApp1
         public bool IsWin()
         {
             return (this.pointer.Bounds.IntersectsWith(win.Bounds));
+        }
+        public void Win()
+        {
+            if (_nextForm != null)
+            {
+                DialogResult result = MessageBox.Show(
+                    "Перейти на следующий уровень?",
+                    "Сообщение",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Information,
+                    MessageBoxDefaultButton.Button1,
+                    MessageBoxOptions.DefaultDesktopOnly);
+
+                if (result == DialogResult.Yes)
+                {
+                    _nextForm.Show();
+                    _thisForm.Hide();
+                    _nextForm.TopMost = true;
+                    _nextForm.TopMost = false;
+                }
+                else
+                {
+                    Form form = new End(1);
+                    _thisForm.Hide();
+                    form.Show();
+                }
+            }
+            else
+            {
+                Form form = new End(1);
+                _thisForm.Hide();
+                form.Show();
+            }
+            
         }
     }
 }

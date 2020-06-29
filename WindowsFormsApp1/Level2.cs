@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -6,6 +7,7 @@ namespace WindowsFormsApp1
     public partial class Level2 : Form
     {
         private Game _game;
+        private Form _nextForm;
 
         public Level2()
         {
@@ -17,18 +19,18 @@ namespace WindowsFormsApp1
         {
             var eKeyCode = e.KeyCode;
             _game.TryMovePoint(eKeyCode);
-            
         }
 
         private void Level2_Load(object sender, EventArgs e)
         {
-            this._game = new Game(panel1, pointer, win, Width, Height);
-            _game.OnWin += Win;
+            this._nextForm = new Level3();
+            this._game = new Game(panel1, pointer, win, this, this._nextForm);
+            this.FormClosed += FormClose;
         }
 
-        public void Win()
+        private void FormClose(object sender, FormClosedEventArgs e)
         {
-            Text = "u win";
+            Application.Exit();
         }
     }
 }

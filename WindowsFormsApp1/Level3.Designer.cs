@@ -2,7 +2,7 @@
 
 namespace WindowsFormsApp1
 {
-    partial class Level1
+    partial class Level3
     {
         /// <summary>
         /// Required designer variable.
@@ -31,9 +31,11 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Level1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Level3));
             this.pointer = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.border20 = new System.Windows.Forms.PictureBox();
+            this.border19 = new System.Windows.Forms.PictureBox();
             this.border18 = new System.Windows.Forms.PictureBox();
             this.border17 = new System.Windows.Forms.PictureBox();
             this.border16 = new System.Windows.Forms.PictureBox();
@@ -55,6 +57,8 @@ namespace WindowsFormsApp1
             this.win = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize) (this.pointer)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.border20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.border19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.border18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.border17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.border16)).BeginInit();
@@ -88,6 +92,8 @@ namespace WindowsFormsApp1
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.border20);
+            this.panel1.Controls.Add(this.border19);
             this.panel1.Controls.Add(this.border18);
             this.panel1.Controls.Add(this.border17);
             this.panel1.Controls.Add(this.border16);
@@ -112,6 +118,26 @@ namespace WindowsFormsApp1
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(447, 452);
             this.panel1.TabIndex = 2;
+            // 
+            // border20
+            // 
+            this.border20.Image = ((System.Drawing.Image) (resources.GetObject("border20.Image")));
+            this.border20.Location = new System.Drawing.Point(355, 240);
+            this.border20.Name = "border20";
+            this.border20.Size = new System.Drawing.Size(80, 3);
+            this.border20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.border20.TabIndex = 21;
+            this.border20.TabStop = false;
+            // 
+            // border19
+            // 
+            this.border19.Image = ((System.Drawing.Image) (resources.GetObject("border19.Image")));
+            this.border19.Location = new System.Drawing.Point(358, 63);
+            this.border19.Name = "border19";
+            this.border19.Size = new System.Drawing.Size(3, 180);
+            this.border19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.border19.TabIndex = 20;
+            this.border19.TabStop = false;
             // 
             // border18
             // 
@@ -176,7 +202,7 @@ namespace WindowsFormsApp1
             // border6
             // 
             this.border6.Image = ((System.Drawing.Image) (resources.GetObject("border6.Image")));
-            this.border6.Location = new System.Drawing.Point(181, 322);
+            this.border6.Location = new System.Drawing.Point(104, 339);
             this.border6.Name = "border6";
             this.border6.Size = new System.Drawing.Size(180, 3);
             this.border6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -186,7 +212,7 @@ namespace WindowsFormsApp1
             // border5
             // 
             this.border5.Image = ((System.Drawing.Image) (resources.GetObject("border5.Image")));
-            this.border5.Location = new System.Drawing.Point(181, 185);
+            this.border5.Location = new System.Drawing.Point(109, 66);
             this.border5.Name = "border5";
             this.border5.Size = new System.Drawing.Size(3, 140);
             this.border5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -196,7 +222,7 @@ namespace WindowsFormsApp1
             // border4
             // 
             this.border4.Image = ((System.Drawing.Image) (resources.GetObject("border4.Image")));
-            this.border4.Location = new System.Drawing.Point(114, 185);
+            this.border4.Location = new System.Drawing.Point(0, 114);
             this.border4.Name = "border4";
             this.border4.Size = new System.Drawing.Size(70, 3);
             this.border4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -206,7 +232,7 @@ namespace WindowsFormsApp1
             // border8
             // 
             this.border8.Image = ((System.Drawing.Image) (resources.GetObject("border8.Image")));
-            this.border8.Location = new System.Drawing.Point(281, 163);
+            this.border8.Location = new System.Drawing.Point(381, 319);
             this.border8.Name = "border8";
             this.border8.Size = new System.Drawing.Size(3, 80);
             this.border8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -226,7 +252,7 @@ namespace WindowsFormsApp1
             // border11
             // 
             this.border11.Image = ((System.Drawing.Image) (resources.GetObject("border11.Image")));
-            this.border11.Location = new System.Drawing.Point(319, 66);
+            this.border11.Location = new System.Drawing.Point(176, 203);
             this.border11.Name = "border11";
             this.border11.Size = new System.Drawing.Size(3, 100);
             this.border11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -266,7 +292,7 @@ namespace WindowsFormsApp1
             // border12
             // 
             this.border12.Image = ((System.Drawing.Image) (resources.GetObject("border12.Image")));
-            this.border12.Location = new System.Drawing.Point(165, 86);
+            this.border12.Location = new System.Drawing.Point(281, 294);
             this.border12.Name = "border12";
             this.border12.Size = new System.Drawing.Size(3, 48);
             this.border12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -276,7 +302,7 @@ namespace WindowsFormsApp1
             // border2
             // 
             this.border2.Image = ((System.Drawing.Image) (resources.GetObject("border2.Image")));
-            this.border2.Location = new System.Drawing.Point(98, 131);
+            this.border2.Location = new System.Drawing.Point(109, 203);
             this.border2.Name = "border2";
             this.border2.Size = new System.Drawing.Size(70, 3);
             this.border2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -296,26 +322,28 @@ namespace WindowsFormsApp1
             // win
             // 
             this.win.Image = ((System.Drawing.Image) (resources.GetObject("win.Image")));
-            this.win.Location = new System.Drawing.Point(281, 163);
+            this.win.Location = new System.Drawing.Point(0, 240);
             this.win.Name = "win";
             this.win.Size = new System.Drawing.Size(55, 55);
             this.win.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.win.TabIndex = 1;
             this.win.TabStop = false;
             // 
-            // Level1
+            // Level3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(437, 450);
             this.Controls.Add(this.panel1);
-            this.Name = "Level1";
-            this.Text = "Уровень 1";
-            this.Load += new System.EventHandler(this.Level1_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Level1_KeyDown);
+            this.Name = "Level3";
+            this.Text = "Уровень 3";
+            this.Load += new System.EventHandler(this.Level3_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Level3_KeyDown);
             ((System.ComponentModel.ISupportInitialize) (this.pointer)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.border20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.border19)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.border18)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.border17)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.border16)).EndInit();
@@ -348,7 +376,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.PictureBox border16;
         private System.Windows.Forms.PictureBox border17;
         private System.Windows.Forms.PictureBox border18;
+        private System.Windows.Forms.PictureBox border19;
         private System.Windows.Forms.PictureBox border2;
+        private System.Windows.Forms.PictureBox border20;
         private System.Windows.Forms.PictureBox border3;
         private System.Windows.Forms.PictureBox border4;
         private System.Windows.Forms.PictureBox border5;
