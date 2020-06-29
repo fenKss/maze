@@ -15,6 +15,10 @@ namespace WindowsFormsApp1
         private int _formWidth;
         private int _formHeight;
 
+        public delegate void WinHandler();
+
+        public event WinHandler OnWin;
+
         public Game(Panel panel, PictureBox pointer, PictureBox win, int width, int height)
         {
             this.pointer = pointer;
@@ -64,14 +68,37 @@ namespace WindowsFormsApp1
             return x >= 0 && x + pointer.Width <= _formWidth && y >= 0 && y + pointer.Height <= _formHeight;
         }
 
-        public void MovePoint(Point point)
+        public void TryMovePoint(Keys eKeyCode)
+        {
+            for (int i = 0; i < 15; i++)
+            {
+                Point point = this.CalculatePoint(eKeyCode);
+                //this.Text = _game.IsPointInBorder(point).ToString();
+                if (this.IsPointInBorder(point))
+                {
+                    this.MovePoint(point);
+
+                    if (this.IsWin())
+                    {
+                        this.OnWin?.Invoke();
+                        break;
+                    }
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
+
+        private void MovePoint(Point point)
         {
             PictureBox tempPicture = new PictureBox();
 
             tempPicture.Width = this.pointer.Width;
             tempPicture.Height = this.pointer.Height;
             tempPicture.Location = point;
-            
+
             if (!IsIntersects(tempPicture)) this.pointer.Location = point;
 
 

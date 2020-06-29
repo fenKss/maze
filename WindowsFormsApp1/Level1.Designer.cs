@@ -34,6 +34,8 @@ namespace WindowsFormsApp1
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.pointer = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.border18 = new System.Windows.Forms.PictureBox();
+            this.border17 = new System.Windows.Forms.PictureBox();
             this.border16 = new System.Windows.Forms.PictureBox();
             this.border15 = new System.Windows.Forms.PictureBox();
             this.border3 = new System.Windows.Forms.PictureBox();
@@ -51,10 +53,10 @@ namespace WindowsFormsApp1
             this.border2 = new System.Windows.Forms.PictureBox();
             this.border1 = new System.Windows.Forms.PictureBox();
             this.win = new System.Windows.Forms.PictureBox();
-            this.border17 = new System.Windows.Forms.PictureBox();
-            this.border18 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize) (this.pointer)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.border18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.border17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.border16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.border15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.border3)).BeginInit();
@@ -72,8 +74,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize) (this.border2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.border1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.win)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.border17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.border18)).BeginInit();
             this.SuspendLayout();
             // 
             // pointer
@@ -112,6 +112,26 @@ namespace WindowsFormsApp1
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(447, 452);
             this.panel1.TabIndex = 2;
+            // 
+            // border18
+            // 
+            this.border18.Image = ((System.Drawing.Image) (resources.GetObject("border18.Image")));
+            this.border18.Location = new System.Drawing.Point(432, -14);
+            this.border18.Name = "border18";
+            this.border18.Size = new System.Drawing.Size(3, 463);
+            this.border18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.border18.TabIndex = 19;
+            this.border18.TabStop = false;
+            // 
+            // border17
+            // 
+            this.border17.Image = ((System.Drawing.Image) (resources.GetObject("border17.Image")));
+            this.border17.Location = new System.Drawing.Point(0, 446);
+            this.border17.Name = "border17";
+            this.border17.Size = new System.Drawing.Size(435, 10);
+            this.border17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.border17.TabIndex = 18;
+            this.border17.TabStop = false;
             // 
             // border16
             // 
@@ -283,26 +303,6 @@ namespace WindowsFormsApp1
             this.win.TabIndex = 1;
             this.win.TabStop = false;
             // 
-            // border17
-            // 
-            this.border17.Image = ((System.Drawing.Image) (resources.GetObject("border17.Image")));
-            this.border17.Location = new System.Drawing.Point(0, 446);
-            this.border17.Name = "border17";
-            this.border17.Size = new System.Drawing.Size(435, 10);
-            this.border17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.border17.TabIndex = 18;
-            this.border17.TabStop = false;
-            // 
-            // border18
-            // 
-            this.border18.Image = ((System.Drawing.Image) (resources.GetObject("border18.Image")));
-            this.border18.Location = new System.Drawing.Point(432, -14);
-            this.border18.Name = "border18";
-            this.border18.Size = new System.Drawing.Size(3, 463);
-            this.border18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.border18.TabIndex = 19;
-            this.border18.TabStop = false;
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -316,6 +316,8 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize) (this.pointer)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.border18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.border17)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.border16)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.border15)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.border3)).EndInit();
@@ -333,8 +335,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize) (this.border2)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.border1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.win)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.border17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.border18)).EndInit();
             this.ResumeLayout(false);
         }
 

@@ -16,11 +16,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -30,8 +26,9 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             Form2 form = new Form2();
-            form.Show();
             this.Hide();
+            form.Show();
+            form.TopMost = true;
         }
     }
 }

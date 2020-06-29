@@ -63,7 +63,6 @@
             this.label1.Size = new System.Drawing.Size(113, 28);
             this.label1.TabIndex = 2;
             this.label1.Text = "Лабиринт";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
