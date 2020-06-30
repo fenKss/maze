@@ -30,6 +30,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -45,7 +46,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(296, 259);
+            this.button1.Location = new System.Drawing.Point(468, 515);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 50);
             this.button1.TabIndex = 0;
@@ -55,11 +56,12 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label1.Location = new System.Drawing.Point(296, 153);
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label1.Location = new System.Drawing.Point(437, 190);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(113, 28);
+            this.label1.Size = new System.Drawing.Size(202, 48);
             this.label1.TabIndex = 2;
             this.label1.Text = "Лабиринт";
             // 
@@ -69,7 +71,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.выборУровняToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1018, 28);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -83,21 +85,21 @@
             // уровень1ToolStripMenuItem
             // 
             this.уровень1ToolStripMenuItem.Name = "уровень1ToolStripMenuItem";
-            this.уровень1ToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.уровень1ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.уровень1ToolStripMenuItem.Text = "Уровень 1";
             this.уровень1ToolStripMenuItem.Click += new System.EventHandler(this.уровень1ToolStripMenuItem_Click);
             // 
             // уровень2ToolStripMenuItem
             // 
             this.уровень2ToolStripMenuItem.Name = "уровень2ToolStripMenuItem";
-            this.уровень2ToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.уровень2ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.уровень2ToolStripMenuItem.Text = "Уровень 2";
             this.уровень2ToolStripMenuItem.Click += new System.EventHandler(this.уровень2ToolStripMenuItem_Click);
             // 
             // уровень3ToolStripMenuItem
             // 
             this.уровень3ToolStripMenuItem.Name = "уровень3ToolStripMenuItem";
-            this.уровень3ToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.уровень3ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.уровень3ToolStripMenuItem.Text = "Уровень 3";
             this.уровень3ToolStripMenuItem.Click += new System.EventHandler(this.уровень3ToolStripMenuItem_Click);
             // 
@@ -119,7 +121,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1018, 739);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);

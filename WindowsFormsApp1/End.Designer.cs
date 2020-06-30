@@ -84,7 +84,7 @@ namespace WindowsFormsApp1
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(217, 22);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Добавить свое имя в историю";
+            this.label3.Text = "Вписать свое имя в историю";
             // 
             // textBox1
             // 

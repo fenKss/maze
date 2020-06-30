@@ -30,6 +30,7 @@ namespace WindowsFormsApp1
             this._nextForm = nextForm;
             this._panel = panel;
             this.win = win;
+            
             string pattern = "border.+";
             this._borders = panel.Controls.Cast<PictureBox>()
                 .Where(x => Regex.IsMatch(x.Name, pattern, RegexOptions.IgnoreCase)).ToList();
@@ -104,7 +105,6 @@ namespace WindowsFormsApp1
             for (int i = 0; i < 15; i++)
             {
                 Point point = this.CalculatePoint(eKeyCode);
-                //this.Text = _game.IsPointInBorder(point).ToString();
                 if (this.IsPointInBorder(point))
                 {
                     this.MovePoint(point);
@@ -183,11 +183,10 @@ namespace WindowsFormsApp1
             }
             else
             {
-                Form form = new End(1);
+                Form form = new End(this.sec);
                 _thisForm.Hide();
                 form.Show();
             }
-            
         }
     }
 }
